@@ -1,17 +1,28 @@
 {
-    "name": "Typst",
-    "image": "ghcr.io/adamijak/typst:main",
-    "customizations": {
-      "vscode": {
-        "extensions": [
-          "nvarner.typst-lsp",
-          "mgt19937.typst-preview",
-          "calebfiggers.typst-companion"
-        ],
-        "settings": {
-          "terminal.integrated.shell.linux": "/bin/bash"
-        }
-      }
+  "name": "Typst",
+  "image": "ghcr.io/adamijak/typst:main",
+  "remoteUser": "root",
+  "image": "mcr.microsoft.com/vscode/devcontainers/base:0-buster",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "runArgs": [
+    "-v",
+    "/var/run/docker.sock:/var/run/docker.sock"
+  ],
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y git",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "nvarner.typst-lsp",
+        "mgt19937.typst-preview",
+        "mathematic.vscode-pdf",
+        "ritwickdey.LiveServer",
+        "GitHub.copilot",
+        // Visual Studio Live Share enables you to collaboratively edit and debug with others in real time
+        "ms-vsliveshare.vsliveshare",
+        "mhutchie.git-graph"
+      ]
     }
+  }
 }
-  
