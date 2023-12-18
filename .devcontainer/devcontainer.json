@@ -1,0 +1,17 @@
+{
+    "name": "Typst",
+    "image": "ghcr.io/adamijak/typst:main",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "nvarner.typst-lsp",
+          "mgt19937.typst-preview",
+          "calebfiggers.typst-companion"
+        ],
+        "settings": {
+          "terminal.integrated.shell.linux": "/bin/bash"
+        }
+      }
+    }
+}
+  
